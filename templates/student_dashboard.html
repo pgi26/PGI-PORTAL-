@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -28,7 +29,6 @@ PGI - Student Portal
 
 </div>
 
-
 <div style="position:absolute;right:30px;display:flex;align-items:center;gap:10px;">
 
 <span id="userName" style="color:#FFD700;font-weight:700;">Hello, Student</span>
@@ -57,9 +57,8 @@ style="display:none;position:absolute;right:30px;top:70px;background:white;borde
 
 </header>
 
-
 <div class="dashboard-container">
-    
+
 <div class="sidebar">
 
 <div class="card schedule" style="margin-bottom:25px;">
@@ -72,7 +71,7 @@ style="display:none;position:absolute;right:30px;top:70px;background:white;borde
 </div>
 
 </div>
-        
+
 <div class="card">
 
 <div class="card-title">💡 Career Tips</div>
@@ -158,17 +157,17 @@ Which field are you planning to enter for your 2026 placement?
 <div class="form-group">
 <input type="number" name="age" placeholder="Age" required>
 </div>
-                
+
 <div class="form-group" style="margin-top:20px;">
 <label>Upload Resume (PDF)</label>
 <input type="file" name="resume" accept=".pdf" required style="padding:8px;">
 </div>
-                
+
 <div class="form-group">
 <label>Upload Photo</label>
 <input type="file" name="photo" accept="image/*" required style="padding:8px;">
 </div>
-                
+
 <button class="save-btn" type="submit">Update Information</button>
 
 </form>
@@ -179,14 +178,12 @@ Which field are you planning to enter for your 2026 placement?
 
 </div>
 
-
 <div class="assessment-bar">
 <button class="assessment-btn" onclick="checkAndProceed()">
 <span>🎯 Ready to Get Hired?</span>
 <strong>Take Assessment Now</strong>
 </button>
 </div>
-
 
 <div class="modal-overlay" id="modalOverlay">
 
@@ -205,7 +202,6 @@ Which field are you planning to enter for your 2026 placement?
 </div>
 
 </div>
-
 
 <div class="modal-overlay" id="welcomeModal" style="display:none;">
 
@@ -245,47 +241,25 @@ Enter Portal →
 
 </div>
 
-
 <script src="{{ url_for('static', filename='js/student_dashboard.js') }}"></script>
 
-
 <script>
-
-document.addEventListener("DOMContentLoaded", function(){
-
-let modal=document.getElementById("welcomeModal");
-
-if(modal){
-modal.style.display="flex";
-}
-
-});
-
-
-function closeWelcomeModal(){
-document.getElementById("welcomeModal").style.display="none";
-}
-
 
 function toggleProfileMenu(){
 
 let menu=document.getElementById("profileMenu");
 
-menu.style.display=
+menu.style.display =
 menu.style.display==="block"?"none":"block";
 
 }
-
 
 window.onclick=function(event){
 
 let menu=document.getElementById("profileMenu");
 
-if(!event.target.closest("#profileMenu") &&
-!event.target.closest("img")){
-
+if(!event.target.closest(".profile")){
 menu.style.display="none";
-
 }
 
 }
