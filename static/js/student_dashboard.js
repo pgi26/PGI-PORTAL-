@@ -2,20 +2,46 @@
  * ✨ Tie-up Companies List ✨
  */
 const companies = [
-    "Vikram Solar Pvt Ltd", "Mahle Engine Components India Pvt Ltd", 
-    "Dae Seung Autoparts india Pvt Ltd", "Prabha Engineering Pvt Ltd", 
-    "Wittur Elevator Components India Pvt. Ltd", "Wipro Enterprises Private Limited", 
-    "Bonfiglioli Transmissions Pvt Ltd", "Tata Electronics", "Foxconn", 
-    "Infac India Pvt Ltd", "Hangchang India Pvt Ltd", "NIPPON STEEL", 
-    "Synergyrevo Global Business Service Ltd", "GJOBS India Pvt Ltd", 
-    "Crown inspection engineering service pvt Ltd", "Makjuz technologies", 
-    "MAATROM HR SOLUTIONS PRIVATE LIMITED", "Sankar sealing system pvt Ltd", 
-    "K2 cranes& components Pvt Ltd", "American Eye Care Centre", 
-    "ADORY creatives", "Trujet Printing Inks", "TVS Training & Services", 
-    "Digital Inertia Private Limited"
+"Vikram Solar Pvt Ltd",
+"Mahle Engine Components India Pvt Ltd",
+"Dae Seung Autoparts india Pvt Ltd",
+"Prabha Engineering Pvt Ltd",
+"Wittur Elevator Components India Pvt. Ltd",
+"Wipro Enterprises Private Limited",
+"Bonfiglioli Transmissions Pvt Ltd",
+"Tata Electronics",
+"Foxconn",
+"Infac India Pvt Ltd",
+"Hangchang India Pvt Ltd",
+"NIPPON STEEL",
+"Abrains Technologies",
+"Synergyrevo Global Business Service Ltd",
+"Ienergizer IT Services Pvt ltd.,",
+"GJOBS India Pvt Ltd",
+"Crown inspection engineering service pvt Ltd",
+"Makjuz technologies",
+"ifive technology private limited",
+"MAATROM HR SOLUTIONS PRIVATE LIMITED",
+"Sankar sealing system pvt Ltd",
+"K2 cranes& components Pvt Ltd",
+"American Eye Care Centre",
+"ADORY creatives",
+"THE SOUTHERN ASSOCIATES",
+"Trujet Printing Inks",
+"NIIT IFBI - HDFC Bank",
+"Westside - Trent Limited - TATA ENTERPRISE",
+"Guna Manpower services",
+"Emblaze Staffing Solutions",
+"Mastermind",
+"Quesscorp",
+"iFive Technology Private Limited",
+"TRAC FUJICO AIRSYSTEMS LLP",
+"Deejos Engineers and Contractors",
+"Dhvani Research",
+"Swiggy",
+"TVS Training & Services",
+"Digital Inertia Private Limited"
 ];
-
-/**
  * ✨ Role Data Configuration ✨
  */
 const rolesData = {
