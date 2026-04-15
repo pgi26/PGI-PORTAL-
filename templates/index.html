@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PGI Job Portal</title>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+</head>
+<body>
+
+<div class="bg-slider">
+    <img src="https://i.pinimg.com/736x/8b/ef/55/8bef5563705ba2e1d5f8fc38b84a5721.jpg" alt="Background Image 1">
+    <img src="https://i.pinimg.com/736x/e7/af/c7/e7afc7833290f90f46deb42a86174006.jpg" alt="Background Image 2">
+    <img src="https://i.pinimg.com/736x/96/84/6b/96846b855d1b047b44be66b38868b56f.jpg" alt="Background Image 3">
+    <img src="https://i.pinimg.com/736x/b3/13/b0/b313b03395c8464dd27cd5b128b390c5.jpg" alt="Background Image 4">
+    <img src="https://i.pinimg.com/736x/f0/ef/5e/f0ef5ef18fd2a348226b3c25e17820e6.jpg" alt="Background Image 5">
+    <img src="https://i.pinimg.com/736x/da/0a/57/da0a57051ab8b3cdf2d5245a66689c5e.jpg" alt="Background Image 6">
+    <img src="https://i.pinimg.com/736x/d1/35/56/d13556ec053cffc2410a682ee33436d6.jpg" alt="Background Image 7">
+    <img src="https://i.pinimg.com/736x/21/70/46/21704649a5e698cfe70a862e71784fb1.jpg" alt="Background Image 8">
+    <img src="https://i.pinimg.com/736x/e0/9b/6e/e09b6e164f5c08c9cc02888dda184bce.jpg" alt="Background Image 9">
+    <img src="https://i.pinimg.com/736x/bd/b0/26/bdb0266036e0239b97f0b82bcadd3045.jpg" alt="Background Image 10">
+</div>
+
+
+<div class="container">
+
+<div class="header-container">
+<button id="backBtn" class="back-btn hidden" onclick="showSelection()">←</button>
+<h2 id="portalTitle">PGI Job Portal</h2>
+</div>
+
+
+<div id="selection">
+
+<button onclick="showLogin('student')">Student Portal</button>
+
+<button onclick="showLogin('company')">Company Portal</button>
+
+</div>
+
+
+<div id="loginForm" class="hidden">
+
+<h3 id="formTitle">Login</h3>
+
+<input type="email" id="email" placeholder="Email Address">
+
+
+<div class="password-wrapper">
+<input type="password" id="pass" placeholder="Password">
+<span class="toggle-eye" onclick="togglePassword()">👁</span>
+</div>
+
+
+<div id="forgotPasswordLink" class="forgot-password" onclick="forgotPassword()">
+Forgot Password?
+</div>
+
+
+<button onclick="handleLogin()">Login</button>
+
+
+<div class="register-link" id="regLink" onclick="showRegister()">
+Register New Student
+</div>
+
+</div>
+
+
+<div id="registerForm" class="hidden">
+
+<h3 id="regTitle">Create Account</h3>
+
+<input type="text" id="regName" placeholder="Full Name">
+
+<input type="email" id="regEmail" placeholder="Email Address">
+
+
+<div class="password-wrapper">
+<input type="password" id="regPass" placeholder="Password">
+<span class="toggle-eye" onclick="toggleRegisterPassword()">👁</span>
+</div>
+
+<button onclick="handleRegistration()">Sign Up</button>
+
+</div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Domain | PGI Job Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/domain.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <div style="font-weight: 800; font-size: 22px;">PGI Job Portal</div>
+    <a href="student_dashboard.html" class="back-btn">
+        <span>🔙</span> Back to Dashboard
+    </a>
+</header>
+
+<div class="container">
+    <h1 class="page-title" id="page-title">Loading Specializations...</h1>
+    <p class="page-subtitle">Select your specific area of expertise to generate your targeted assessment.</p>
+
+    <div class="domain-grid" id="tech-domains">
+        <div class="domain-card" onclick="goToAssessment('Software Engineering')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Software Engineering">
+            </div>
+            <div class="card-content">
+                <h3>Software Engineering</h3>
+                <p>Full-stack development, algorithms, system architecture, and application design.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Data Science & AI')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Data Science">
+            </div>
+            <div class="card-content">
+                <h3>Data Science & AI</h3>
+                <p>Machine learning, statistical analysis, Python processing, and neural networks.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Cloud Computing')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Cloud Computing">
+            </div>
+            <div class="card-content">
+                <h3>Cloud Computing</h3>
+                <p>AWS/Azure infrastructure, DevOps pipelines, containerization, and networking.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Cybersecurity')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity">
+            </div>
+            <div class="card-content">
+                <h3>Cybersecurity</h3>
+                <p>Network defense, ethical hacking, cryptography, and risk assessment.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('UI/UX Design')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80" alt="UI/UX Design">
+            </div>
+            <div class="card-content">
+                <h3>UI/UX Design</h3>
+                <p>User research, wireframing, prototyping, and creating seamless digital experiences.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Mobile App Development')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Mobile Development">
+            </div>
+            <div class="card-content">
+                <h3>Mobile App Development</h3>
+                <p>iOS, Android, React Native, and Flutter cross-platform mobile engineering.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('DevOps & SRE')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?auto=format&fit=crop&w=600&q=80" alt="DevOps">
+            </div>
+            <div class="card-content">
+                <h3>DevOps & SRE</h3>
+                <p>CI/CD pipelines, automation, site reliability, server maintenance, and scaling.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Blockchain & Web3')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?auto=format&fit=crop&w=600&q=80" alt="Blockchain">
+            </div>
+            <div class="card-content">
+                <h3>Blockchain & Web3</h3>
+                <p>Smart contracts, decentralized apps (dApps), cryptography, and Ethereum/Solidity.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('IoT & Embedded Systems')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?auto=format&fit=crop&w=600&q=80" alt="IoT">
+            </div>
+            <div class="card-content">
+                <h3>IoT & Embedded Systems</h3>
+                <p>Hardware programming, sensor integration, microcontrollers, and smart devices.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Game Development')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=600&q=80" alt="Game Dev">
+            </div>
+            <div class="card-content">
+                <h3>Game Development</h3>
+                <p>Unity, Unreal Engine, 3D rendering, physics engines, and game logic.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('AR/VR & Metaverse')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=600&q=80" alt="AR/VR">
+            </div>
+            <div class="card-content">
+                <h3>AR/VR & Metaverse</h3>
+                <p>Augmented reality, spatial computing, virtual environments, and 3D modeling.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="domain-grid" id="non-tech-domains">
+        <div class="domain-card" onclick="goToAssessment('Human Resources')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="Human Resources">
+            </div>
+            <div class="card-content">
+                <h3>Human Resources</h3>
+                <p>Talent acquisition, employee relations, organizational behavior, and payroll.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Marketing & Sales')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Marketing">
+            </div>
+            <div class="card-content">
+                <h3>Marketing & Sales</h3>
+                <p>Digital marketing, brand growth strategies, SEO, and client acquisition.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Finance & Accounting')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Finance">
+            </div>
+            <div class="card-content">
+                <h3>Finance & Accounting</h3>
+                <p>Financial modeling, corporate accounting, investments, and risk management.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Business Operations')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Operations">
+            </div>
+            <div class="card-content">
+                <h3>Business Operations</h3>
+                <p>Supply chain logistics, project management, and business strategy.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Product Management')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="Product Management">
+            </div>
+            <div class="card-content">
+                <h3>Product Management</h3>
+                <p>Agile methodologies, product lifecycles, user roadmaps, and stakeholder alignment.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Business Analytics')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=600&q=80" alt="Business Analytics">
+            </div>
+            <div class="card-content">
+                <h3>Business Analytics</h3>
+                <p>Data visualization, market trends, KPI tracking, and strategic forecasting.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Supply Chain & Logistics')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80" alt="Supply Chain">
+            </div>
+            <div class="card-content">
+                <h3>Supply Chain & Logistics</h3>
+                <p>Inventory control, global shipping, vendor relations, and warehouse management.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Corporate Law & Compliance')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80" alt="Corporate Law">
+            </div>
+            <div class="card-content">
+                <h3>Corporate Law & Compliance</h3>
+                <p>Contract drafting, regulatory policies, risk mitigation, and corporate governance.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Public Relations (PR)')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1557425955-df376b5903c8?auto=format&fit=crop&w=600&q=80" alt="Public Relations">
+            </div>
+            <div class="card-content">
+                <h3>Public Relations (PR)</h3>
+                <p>Media communications, brand reputation management, press releases, and events.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Customer Success')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Customer Success">
+            </div>
+            <div class="card-content">
+                <h3>Customer Success</h3>
+                <p>Client retention, onboarding support, relationship management, and service strategy.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+
+        <div class="domain-card" onclick="goToAssessment('Economics & Investment Banking')">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="Economics">
+            </div>
+            <div class="card-content">
+                <h3>Economics & Investment</h3>
+                <p>Macroeconomic research, asset management, capital markets, and equity trading.</p>
+                <span class="select-badge">Select Path →</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/domain.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Center - PGI Job Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/assessment.css') }}">
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">PGI Job Portal</div>
+    <a href="domain.html" class="back-btn"><span>🔙</span> Domain Selection</a>
+</div>
+
+<div class="container" id="dashboardContent">
+    <div class="overview-banner">
+        <div class="overview-text">
+            <h1 id="bannerTitle">Assessment Center</h1>
+            <p>Complete these mandatory tests to unlock premium applications.</p>
+        </div>
+
+```
+    <div class="overview-stats" id="overviewStats">
+        <div class="stat-item">
+            <span>Total Tests</span>
+            <strong>2</strong>
+        </div>
+
+        <div class="stat-item">
+            <span>Questions</span>
+            <strong>40</strong>
+        </div>
+
+        <div class="stat-item">
+            <span>Pass Score</span>
+            <strong>60%</strong>
+        </div>
+    </div>
+</div>
+
+<div class="sections-grid" id="mainGrid">
+    <div class="section-card" id="dynamicCard">
+
+        <h2 class="section-title" id="dynamicSectionTitle">
+            💻 Domain Assessment
+        </h2>
+
+        <p class="section-desc" id="dynamicSectionDesc">
+            Evaluate your core skills for this specialization.
+        </p>
+
+        <div id="testCardsContainer"></div>
+
+    </div>
+</div>
+```
+
+</div>
+
+<div class="container exam-container" id="examInterface" style="display:none;">
+
+```
+<div class="exam-header-bar">
+    <h2 id="examTitle">Test Name</h2>
+    <div class="timer-box" id="examTimer">30:00</div>
+</div>
+
+<div id="questionsWrapper"></div>
+
+<button type="button"
+        class="final-submit-btn"
+        id="submitExamBtn"
+        disabled
+        onclick="submitExam()">
+    Submit Assessment
+</button>
+
+<p style="text-align:center; color:#6b7280; font-size:13px; margin-top:10px;">
+    *You must answer all questions to submit.
+</p>
+```
+
+</div>
+
+<div class="container result-container" id="resultInterface" style="display:none;">
+
+```
+<div class="score-card">
+
+    <h2 id="resultHeaderTitle">Assessment Completed!</h2>
+
+    <p id="resultHeaderSub"
+       style="color:#6b7280; margin-bottom:20px;">
+       Your responses have been recorded securely.
+    </p>
+
+    <div class="score-circle" id="resultCircle">
+
+        <div class="points" id="finalScoreDisplay">0/0</div>
+
+        <div class="percent" id="finalPercentageDisplay">0%</div>
+
+    </div>
+
+    <button id="finalActionBtn"
+            class="start-test-btn"
+            style="width:250px; margin: 0 auto; background: var(--tree-green); color: white;">
+
+        Return to Dashboard
+
+    </button>
+
+</div>
+
+<h3 style="color:#111827; border-bottom:2px solid #e5e7eb; padding-bottom:10px;">
+    Detailed Answer Review
+</h3>
+
+<div id="reviewWrapper"></div>
+```
+
+</div>
+
+<div class="modal-overlay" id="rulesModal">
+
+```
+<div class="modal-content">
+
+    <h2 class="rules-title">Examination Rules</h2>
+
+    <hr class="rules-divider" id="rulesDivider">
+
+    <div class="rule-item">
+        1. Candidates must choose only <strong>one</strong> course for this assessment session.
+    </div>
+
+    <div class="rule-item">
+        2. Switching tabs, minimizing the window, or exiting full-screen is <strong>strictly prohibited</strong>.
+    </div>
+
+    <div class="rule-item">
+        3. The use of AI tools, external plugins, or search engines will result in immediate disqualification.
+    </div>
+
+    <div class="rule-item">
+        4. Ensure a stable internet connection; the timer will not pause for connectivity issues.
+    </div>
+
+    <div class="rule-item">
+        5. Your progress is saved automatically. Do not refresh the page during the test.
+    </div>
+
+    <div class="rule-item">
+        6. This assessment must be taken only on a <strong>Laptop or Desktop Computer</strong>. 
+        Mobile phones and tablets are <strong>not supported</strong> for this test.
+    </div>
+
+    <div class="warning-box">
+        🛑 SECURITY SYSTEM ACTIVE: This test runs in Full-Screen mode.
+        Leaving the page or switching tabs will result in automatic disqualification after 1 warning.
+    </div>
+
+    <label class="checkbox-container">
+
+        <input type="checkbox"
+               id="agreeCheck"
+               onchange="toggleProceedBtn()">
+
+        I have read and I agree to follow the rules.
+
+    </label>
+
+    <button class="proceed-btn"
+            id="proceedBtn"
+            onclick="startTest()">
+
+        Proceed to Test
+
+    </button>
+
+</div>
+```
+
+</div>
+
+<div class="alert-overlay" id="securityAlert">
+
+```
+<h1>⚠️ SECURITY WARNING ⚠️</h1>
+
+<p>
+    You have left the secure test environment by switching tabs,
+    minimizing the window, or exiting full-screen.
+    <br><br>
+
+    <strong>This is your FIRST and ONLY warning.</strong>
+    <br>
+
+    If you leave the environment again,
+    your test will be instantly terminated and scored as 0%.
+</p>
+
+<button class="alert-btn" onclick="dismissWarning()">
+    I Understand - Return to Test
+</button>
+```
+
+</div>
+
+<!-- IMPORTANT SCRIPT ORDER -->
+
+<script src="{{ url_for('static', filename='js/questions.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/assessment.js') }}"></script>
+
+</body>
+</html>

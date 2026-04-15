@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard | PGI Job Portal</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/student_dashboard.css') }}">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div style="width:100%;display:flex;align-items:center;justify-content:center;position:relative;">
+
+<div class="title" style="display:flex;align-items:center;gap:10px;">
+
+<a href="https://plantgreeninertia.com/" target="_blank">
+<img src="{{ url_for('static', filename='images/pgilogo.jpeg') }}"
+style="height:60px;width:auto;">
+</a>
+
+<span style="font-size:1.3rem;font-weight:800;">
+PGI - Student Portal
+</span>
+
+</div>
+
+
+<div style="position:absolute;right:30px;display:flex;align-items:center;gap:10px;">
+
+<span id="userName" style="color:#FFD700;font-weight:700;">Hello, Student</span>
+
+<div class="profile" onclick="toggleProfileMenu()" style="cursor:pointer;">
+
+<div class="avatar">
+<img src="{{ url_for('static', filename='images/user.png') }}"
+style="width: 50px;height: 50px;border-radius:70%;" alt="Profile">
+</div>
+
+<div class="profile-menu" id="profileMenu"
+style="display:none;position:absolute;right:30px;top:70px;background:white;border-radius:8px;box-shadow:0 5px 20px rgba(0,0,0,0.15);overflow:hidden;">
+
+<a href="#" onclick="logout()" style="display:block;padding:10px 20px;text-decoration:none;color:#333;">
+🚪 Logout
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<div class="dashboard-container">
+    
+<div class="sidebar">
+
+<div class="card schedule" style="margin-bottom:25px;">
+<div class="card-title">Upcoming Drives</div>
+
+<div style="border-left:2px solid #e5e7eb;padding-left:15px;">
+<p><strong>Apr 16:</strong> NSIC Chennai</p>
+<p><strong>TBA</strong></p>
+<p><strong>TBA</strong></p>
+</div>
+
+</div>
+        
+<div class="card">
+
+<div class="card-title">💡 Career Tips</div>
+
+<p style="font-size:0.9rem;line-height:1.5;color:var(--text-light);">
+Keep your resume updated to 2026 standards. Companies now prioritize 
+problem-solving and specific tool certifications.
+</p>
+
+</div>
+
+</div>
+
+<div class="main-content">
+
+<div class="card">
+
+<div class="card-title">
+Tie-up Companies 
+<span style="font-size:0.8rem;font-weight:400;color:gray;margin-left:auto;">
+(Click for roles)
+</span>
+</div>
+
+<div class="company-grid" id="companyGrid"></div>
+
+</div>
+
+<div class="card path-selection-card">
+
+<div class="card-title" style="justify-content:center;">
+🎯 Choose Your Career Path
+</div>
+
+<p style="font-size:0.9rem;color:var(--text-light);">
+Which field are you planning to enter for your 2026 placement?
+</p>
+
+<div class="path-options">
+
+<div class="path-btn" onclick="selectPath(this,'tech')">
+<span style="font-size:1.5rem;">💻</span>
+<strong>Technical</strong>
+<span style="font-size:0.7rem;opacity:0.8;">Software, Data, Cloud</span>
+</div>
+
+<div class="path-btn" onclick="selectPath(this,'non-tech')">
+<span style="font-size:1.5rem;">💼</span>
+<strong>Non-Technical</strong>
+<span style="font-size:0.7rem;opacity:0.8;">HR, Sales, Marketing</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="profile-section">
+
+<div class="card">
+
+<div class="card-title">Profile Update</div>
+
+<form id="profileForm" enctype="multipart/form-data" onsubmit="saveDetails(event)">
+
+<div class="form-group">
+<input type="text" name="full_name" placeholder="Full Name" required>
+</div>
+
+<div class="form-group">
+<input type="tel" name="mobile" placeholder="Mobile Number" required>
+</div>
+
+<div class="form-group">
+<input type="text" name="college_name" placeholder="College Name" required>
+</div>
+
+<div class="form-group">
+<input type="text" name="degree" placeholder="Degree" required>
+</div>
+
+<div class="form-group">
+<input type="number" name="age" placeholder="Age" required>
+</div>
+                
+<div class="form-group" style="margin-top:20px;">
+<label>Upload Resume (PDF)</label>
+<input type="file" name="resume" accept=".pdf" required style="padding:8px;">
+</div>
+                
+<div class="form-group">
+<label>Upload Photo</label>
+<input type="file" name="photo" accept="image/*" required style="padding:8px;">
+</div>
+                
+<button class="save-btn" type="submit">Update Information</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="assessment-bar">
+<button class="assessment-btn" onclick="checkAndProceed()">
+<span>🎯 Ready to Get Hired?</span>
+<strong>Take Assessment Now</strong>
+</button>
+</div>
+
+
+<div class="modal-overlay" id="modalOverlay">
+
+<div class="modal-content">
+
+<span class="close-modal" onclick="closeModal()">✕</span>
+
+<h2 id="modalTitle"></h2>
+
+<p>Available Openings for 2026 Batch:</p>
+
+<div id="rolesContainer"></div>
+
+<button class="save-btn" onclick="closeModal()">Close View</button>
+
+</div>
+
+</div>
+
+
+<div class="modal-overlay" id="welcomeModal" style="display:none;">
+
+<div class="aesthetic-welcome-card">
+
+<div class="welcome-glow"></div>
+
+<span class="close-welcome" onclick="closeWelcomeModal()">✕</span>
+
+<div class="welcome-content-wrapper">
+
+<div class="welcome-badge">
+THE WORLD'S FIRST EXPERIENTIAL TRAINING COMPANY
+</div>
+
+<h2 class="company-title">Plant Green Inertia</h2>
+
+<div class="title-underline"></div>
+
+<p class="welcome-text">
+Welcome to your exclusive dashboard. We bridge the gap between brilliant academic minds and the dynamic world of modern digital strategy. Build your profile, explore opportunities, and launch your career.
+</p>
+
+<div class="welcome-tags">
+<span>Innovation</span>
+<span>Career Growth</span>
+<span>Job Opportunities</span>
+</div>
+
+<button class="enter-btn" onclick="closeWelcomeModal()">
+Enter Portal →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/student_dashboard.js') }}"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+let modal=document.getElementById("welcomeModal");
+
+if(modal){
+modal.style.display="flex";
+}
+
+});
+
+
+function closeWelcomeModal(){
+document.getElementById("welcomeModal").style.display="none";
+}
+
+
+function toggleProfileMenu(){
+
+let menu=document.getElementById("profileMenu");
+
+menu.style.display=
+menu.style.display==="block"?"none":"block";
+
+}
+
+
+window.onclick=function(event){
+
+let menu=document.getElementById("profileMenu");
+
+if(!event.target.closest("#profileMenu") &&
+!event.target.closest("img")){
+
+menu.style.display="none";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
