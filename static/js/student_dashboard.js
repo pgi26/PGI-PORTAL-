@@ -19,7 +19,170 @@ const companies = [
  * ✨ Role Data Configuration ✨
  */
 const rolesData = {
-    "default": ["HR Executive", "Operations Trainee", "Sales Associate", "Admin Executive"]
+
+    "Vikram Solar Pvt Ltd": [
+        "Solar Engineer", "Production Trainee", "Maintenance Engineer"
+    ],
+
+    "Mahle Engine Components India Pvt Ltd": [
+        "Mechanical Engineer", "Quality Analyst", "Production Engineer"
+    ],
+
+    "Dae Seung Autoparts india Pvt Ltd": [
+        "Assembly Operator", "Machine Operator", "Quality Inspector"
+    ],
+
+    "Prabha Engineering Pvt Ltd": [
+        "Design Engineer", "CNC Operator", "Production Supervisor"
+    ],
+
+    "Wittur Elevator Components India Pvt. Ltd": [
+        "Lift Technician", "Mechanical Engineer", "Quality Inspector"
+    ],
+
+    "Wipro Enterprises Private Limited": [
+        "Software Developer", "Test Engineer", "IT Support"
+    ],
+
+    "Bonfiglioli Transmissions Pvt Ltd": [
+        "Mechanical Engineer", "Production Engineer", "Maintenance Technician"
+    ],
+
+    "Tata Electronics": [
+        "Electronics Engineer", "Process Engineer", "Technician"
+    ],
+
+    "Foxconn": [
+        "Production Associate", "Assembly Technician", "Line Supervisor"
+    ],
+
+    "Infac India Pvt Ltd": [
+        "Manufacturing Engineer", "Quality Engineer", "Machine Operator"
+    ],
+
+    "Hangchang India Pvt Ltd": [
+        "Forklift Technician", "Service Engineer", "Maintenance Staff"
+    ],
+
+    "NIPPON STEEL": [
+        "Metallurgical Engineer", "Production Engineer", "Safety Officer"
+    ],
+
+    // ✅ Updated from your file (24 companies mapping)
+
+    "Abrains Technologies": [
+        "Service engg"
+    ],
+
+    "Synergyrevo Global Business Service Ltd": [
+        "Customer Support Executive - Voice Process"
+    ],
+
+    "Ienergizer IT Services Pvt ltd.,": [
+        "Technical support role", "Customer support executive"
+    ],
+
+    "GJOBS India Pvt Ltd": [
+        "HR", "Finance", "Quality Assurance", "Coordinator"
+    ],
+
+    "Crown inspection engineering service pvt Ltd": [
+        "Quality inspector"
+    ],
+
+    "Makjuz technologies": [
+        "Assembly operator", "supervisor"
+    ],
+
+    "ifive technology private limited": [
+        "Business development executive"
+    ],
+
+    "MAATROM HR SOLUTIONS PRIVATE LIMITED": [
+        "HR"
+    ],
+
+    "Sankar sealing system pvt Ltd": [
+        "Trainee"
+    ],
+
+    "K2 cranes& components Pvt Ltd": [
+        "Technical Diploma&ITI"
+    ],
+
+    "American Eye Care Centre": [
+        "Marketing Executive for Eye Care", "Tele caller", "Receptionist", "Digital Marketing"
+    ],
+
+    "ADORY creatives": [
+        "Videographer", "video editor", "graphics designer", "social media manager", "directors"
+    ],
+
+    "THE SOUTHERN ASSOCIATES": [
+        "CNC/VMC Operator and Setter"
+    ],
+
+    "Trujet Printing Inks": [
+        "Service engineer"
+    ],
+
+    "NIIT IFBI - HDFC Bank": [
+        "Assistant Manager", "Teller", "Welcome Desk"
+    ],
+
+    "Westside - Trent Limited - TATA ENTERPRISE": [
+        "Apprenticeship", "Customer service Associate", "HR executive"
+    ],
+
+    "Guna Manpower services": [
+        "CNC operator", "Mechanical Maintenance", "Electrical maintenance", "Quality"
+    ],
+
+    "Emblaze Staffing Solutions": [
+        "ON Role and OFF ROLE"
+    ],
+
+    "Mastermind": [
+        "BPO", "Tele calling"
+    ],
+
+    "Quesscorp": [
+        "Banking Sectors"
+    ],
+
+    "iFive Technology Private Limited": [
+        "Sales"
+    ],
+
+    "TRAC FUJICO AIRSYSTEMS LLP": [
+        "Relationship Executive", "Ekyc verification specialist", "Telecalling"
+    ],
+
+    "Deejos Engineers and Contractors": [
+        "HVAC - Project Multiple job Opening"
+    ],
+
+    "Dhvani Research": [
+        "Site Supervisor"
+    ],
+
+    "Swiggy": [
+        "Electrical technician", "Mechanical technician", "Office Assistant"
+    ],
+
+    // existing untouched
+    "TVS Training & Services": [
+        "Trainer", "Skill Development Executive", "Field Coordinator"
+    ],
+
+    "Digital Inertia Private Limited": [
+        "Software Developer", "Digital Marketing Executive", "QA Tester"
+    ],
+
+    // fallback
+    "default": [
+        "HR Executive", "Operations Trainee", "Sales Associate", "Admin Executive"
+    ]
 };
 
 /**
