@@ -20,7 +20,6 @@ const companies = [
 "GJOBS India Pvt Ltd",
 "Crown inspection engineering service pvt Ltd",
 "Makjuz technologies",
-"ifive technology private limited",
 "MAATROM HR SOLUTIONS PRIVATE LIMITED",
 "Sankar sealing system pvt Ltd",
 "K2 cranes& components Pvt Ltd",
@@ -42,8 +41,7 @@ const companies = [
 "TVS Training & Services",
 "Digital Inertia Private Limited"
 ];
- * ✨ Role Data Configuration ✨
- */
+
 const rolesData = {
 
     "Vikram Solar Pvt Ltd": [
@@ -118,10 +116,6 @@ const rolesData = {
 
     "Makjuz technologies": [
         "Assembly operator", "supervisor"
-    ],
-
-    "ifive technology private limited": [
-        "Business development executive"
     ],
 
     "MAATROM HR SOLUTIONS PRIVATE LIMITED": [
