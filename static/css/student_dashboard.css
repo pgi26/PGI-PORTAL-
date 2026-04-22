@@ -2,7 +2,7 @@
    ✨ MAIN DASHBOARD STYLES ✨
 ========================================= */
 :root {
-    --primary: #286a34;
+    --primary: #1e4f27;
     --primary-dark: #1e4f27;
     --accent: #facc15;
     --glass: rgba(255, 255, 255, 0.9);
@@ -185,7 +185,7 @@ input:focus { border-color: var(--primary); outline: none; background: #f0fdf4; 
 
 .assessment-btn {
     width: 100%;
-    background: linear-gradient(90deg, var(--primary), #3b8e4b);
+    background: linear-gradient(90deg, var(--primary), #1e4f27);
     color: white;
     padding: 20px;
     border-radius: 50px;
@@ -203,7 +203,7 @@ input:focus { border-color: var(--primary); outline: none; background: #f0fdf4; 
 
 .assessment-btn:hover {
     transform: scale(1.02);
-    box-shadow: 0 15px 50px rgba(40, 106, 52, 0.6);
+    box-shadow: 0 15px 50px #1e4f27(40, 106, 52, 0.6);
 }
 
 .role-tag {
@@ -252,7 +252,7 @@ input:focus { border-color: var(--primary); outline: none; background: #f0fdf4; 
     width: 90%;
     max-width: 600px;
     background: rgba(20, 35, 25, 0.7);
-    border: 1px solid rgba(74, 222, 128, 0.2);
+    border: 1px solid #1e4f27(74, 222, 128, 0.2);
     border-radius: 30px;
     padding: 50px 40px;
     position: relative;
@@ -367,12 +367,12 @@ input:focus { border-color: var(--primary); outline: none; background: #f0fdf4; 
 
 .welcome-tags span:hover {
     background: rgba(74, 222, 128, 0.1);
-    border-color: rgba(74, 222, 128, 0.3);
+    border-color: #1e4f27(74, 222, 128, 0.3);
     transform: translateY(-2px);
 }
 
 .enter-btn {
-    background: #3b7a3e;
+    background: #1e4f27;
     color: white;
     border: none;
     padding: 18px 45px;
@@ -381,7 +381,7 @@ input:focus { border-color: var(--primary); outline: none; background: #f0fdf4; 
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(59, 122, 62, 0.4);
+    box-shadow: 0 10px 30px #1e4f27(59, 122, 62, 0.4);
     display: inline-flex;
     align-items: center;
     gap: 10px;
