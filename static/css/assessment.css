@@ -1,7 +1,7 @@
 /* 🌲 EXACT THEME FROM YOUR CODE */
 :root {
-    --tree-green: #3b7a3e; 
-    --tree-green-dark: #2d612f;
+    --tree-green: #1e4f27; 
+    --tree-green-dark: #1e4f27;
     --blue: #2563eb;
     --text-main: #111827;
     --text-muted: #4b5563;
@@ -21,7 +21,7 @@ body {
 /* 🔥 HEADER */
 .header {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 15px 40px; background: linear-gradient(90deg, var(--tree-green), #4caf50);
+    padding: 15px 40px; background: linear-gradient(90deg, var(--tree-green), #1e4f27);
     color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .logo { font-size: 24px; font-weight: bold; letter-spacing: 0.5px; }
@@ -103,13 +103,13 @@ body {
 .score-circle { width: 140px; height: 140px; border-radius: 50%; border: 8px solid var(--tree-green); display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto 20px auto; }
 .score-circle .points { font-size: 32px; font-weight: 900; color: var(--tree-green); }
 .review-block { background: white; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #e5e7eb; }
-.review-block.correct { border-left-color: #22c55e; }
+.review-block.correct { border-left-color: #1e4f27; }
 .review-block.wrong { border-left-color: #ef4444; }
 
 /* 🛡️ SECURITY ALERT OVERLAY 🛡️ */
 .alert-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-    background: rgba(45, 97, 47, 0.98); z-index: 9999;
+    background: #1e4f27(45, 97, 47, 0.98); z-index: 9999;
     display: none; justify-content: center; align-items: center; flex-direction: column; text-align: center; color: white; padding: 40px;
     backdrop-filter: blur(8px);
 }
